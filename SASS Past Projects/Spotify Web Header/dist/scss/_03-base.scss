@@ -1,0 +1,17 @@
+html {
+  color: $clr-dark;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+body {
+    background-color: $clr-light;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: $clr-light;
+}
+a{
+  color: $clr-light;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}

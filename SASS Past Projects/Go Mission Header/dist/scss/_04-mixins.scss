@@ -1,0 +1,21 @@
+@mixin mediaQuery($width: $break-md) {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+  @mixin mediaQuery($width: $break-sm) {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+  @mixin mediaQuery($width: $break-xl) {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+  @mixin centerAll(){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+ 

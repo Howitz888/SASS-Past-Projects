@@ -1,0 +1,153 @@
+//mobile view
+.header{
+    width: 100%;
+    background: transparent;
+    position: fixed;
+    &_wrapper{
+        @include centerAll;
+        padding: 1rem 3rem;
+        .branding{
+            img{
+                height: 30px;
+                width: auto;
+            }
+        }
+        .header_nav{
+            transition: 0.5s;
+            right: -100rem;
+            width: 100%;
+            top: 0;
+            height: 100vh;
+            position: absolute;
+            background-color: $clr-light;
+            padding: 13rem 0;
+            gap: 3rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 3rem;
+                li{
+                    a{
+                        color: $clr-dark;
+                        font-size: small;
+                        font-weight: bolder;
+                    }
+                    .choose_btn{
+                        padding: 1.05rem 15rem;
+                        background-color:  $clr-blue;
+                        border: 1px solid $clr-dark;
+                        border-radius: 5rem;
+                        display: inline-block;
+                        color: $clr-light;
+                    }
+                }
+            }
+            a{
+                color: $clr-dark;
+                font-size: small;
+                font-weight: bolder; 
+            }
+        }
+        .header_nav ul li a:hover{
+            color: $clr-blue;
+        }
+        .header_nav.open{
+            right: 0;
+            transition: 0.5s;
+        }
+        .burger_btn{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 0.1rem;
+            z-index: 999;
+            span{
+                width: 2rem;
+                height: 0.2rem;
+                background-color: $clr-light;
+                border-radius: 5rem;
+                display: block;
+                transition: 0.5s;
+                &:nth-child(2) {
+                    margin: 0.2rem 0;
+                }
+            }
+        }
+        .burger__btn.open {
+            transition: 0.5s;
+            z-index: 0;
+        }
+    }
+}
+
+//desktop view
+@include mediaQuery($break-lg){
+    .header{
+        width: 100%;
+        background: transparent;
+        position: fixed;
+        &_wrapper{
+            @include centerAll;
+            padding: 1rem 20rem;
+            .branding{
+                img{
+                    height: 40px;
+                    width: auto;
+                }
+            }
+            .header_nav{
+                transition: unset;
+                right: unset;
+                width: unset;
+                top: 0;
+                height: 10%;
+                position: relative;
+                background-color: transparent;
+                padding: 2rem 0;
+                gap: 3rem;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 3rem;
+                    li{
+                        a{
+                            color: $clr-light;
+                            font-size: small;
+                            font-weight: bolder;
+                        }
+                        .choose_btn{
+                            padding: 1rem 5rem;
+                            background-color:  $clr-blue;
+                            border: 2px solid $clr-light;
+                            border-radius: 5rem;
+                            display: inline-block;
+                            color: $clr-light;
+                        }
+                    }
+                }
+                a{
+                    color: $clr-dark;
+                    font-size: small;
+                    font-weight: bolder; 
+                }
+            }
+            .header_nav ul li a:hover{
+                color: $clr-green;
+            }
+            .burger_btn{
+                display: none;
+                span{
+                display: none;
+                }
+            }
+        }
+    }
+}

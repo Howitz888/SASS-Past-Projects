@@ -1,0 +1,42 @@
+.train{
+    padding: 5rem 0;
+    background-color: $clr-light;
+    & h2{
+        font-size: 5rem;
+        color: $clr-dark;
+        font-weight: 600;
+        max-width: 40rem;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    }
+    & &_wrapper{
+        text-align: center;
+        border-bottom: 1px solid gray;
+        padding-bottom: 10rem;
+    }
+    a{
+        width: 15rem;
+        font-size: 2rem;
+    }
+  }
+
+/*REAPETABLE PATTERN*/
+.btn{
+    padding: 1rem 1.5rem;
+    border: 1px solid transparent;
+    display: inline-block;
+    border-radius: 5rem;
+    font-weight: 600
+    
+}
+.btn.bg--mint{
+    background: #04ddb2;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.btn.bg--mint:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
